@@ -14,13 +14,26 @@ class Events extends CI_Controller {
 		// Load our event model.
 		$this->load->model('Event', 'event');
 		
-		print $event_id;
-
 		// Load our current events ID.
 		$this->event->load($event_id);
 
-		print_r($this->event);
+		// Load the event viewing object.
+		$event_view = $this->load->view(
+			'event',
+			array(
+				'event' => $this->event
+			),
+			true
+		);
 
+		// Load the form in our standard template.
+		$this->load->view(
+			'layout',
+			array(
+				'title' => 'View Event',
+				'content' => $event_view,
+			)
+		);
 
 	}
 

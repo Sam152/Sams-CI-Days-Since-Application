@@ -4,13 +4,12 @@
 	<head>
 		<title><?=$title ?></title>
 		<link rel="stylesheet" href="/static/css/style.css">
+		<script type="text/javascript" src="/static/js/app.js"></script>
 	</head>
 
 	<body>
 
 		<div id="content">
-
-			<h1><?=$title ?></h1>
 
 			<?=$content ?>
 
