@@ -1,5 +1,7 @@
 (function(){
 
+	var auth_enabled = true;
+	
 	window.onload = function(){
 
 

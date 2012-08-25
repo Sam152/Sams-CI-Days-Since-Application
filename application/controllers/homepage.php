@@ -37,6 +37,13 @@ class Homepage extends CI_Controller {
 			'required|callback_check_event_timestamp'
 		);
 
+		// Check our password was filled out correctly.
+		$this->form_validation->set_rules(
+			'password',
+			'Password',
+			'required|callback_check_password'
+		);
+
 		// If our form has been fully validated
 		if($this->form_validation->run() === TRUE){
 
@@ -92,5 +99,23 @@ class Homepage extends CI_Controller {
 		return  $valid_timestamp;
 	}
 
+
+	// Ensure the password is correct
+	public function check_password($input){
+
+		$password_correct = $input == 'crouton';
+
+		// If we don't have a valid timestmap
+		if(!$password_correct){
+
+			// Set an error.
+			$this->form_validation->set_message(
+				'check_password', 'The password you entered was incorrect.'
+			);
+		}
+
+		// If the stap
+		return  $password_correct;
+	}
 
 }
