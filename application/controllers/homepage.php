@@ -1,30 +1,25 @@
 <?php
 
 
-
+/**
+ * Our homepage used to create events.
+ */
 class Homepage extends CI_Controller {
 
-
 	public function __construct(){
-
-		parent::__construct();
-		$this->load->model('sams_model', 'sammy');
-		
+		parent::__construct();		
 	}
-
 
 	public function index(){
 
-
-		$data = array(
-			'person' => $this->sammy->get_sam()
+		$this->load->view(
+			'layout',
+			array(
+				'title' => 'test',
+				'content' => 'test',
+			)
 		);
 
-		$this->load->view('sam/sam', $data);
-
 	}
-
-
-
 
 }
