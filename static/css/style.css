@@ -57,3 +57,7 @@ input[name=website]{
 	margin-top:40px;
 	font-size:39px;
 }
+
+.error{
+	color:red;
+}
