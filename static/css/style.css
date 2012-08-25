@@ -1,0 +1,59 @@
+body{
+	background-color:#F5F5F5;
+	color:#555;
+	font-family:Helvetica;
+	height:100%;
+}
+
+#create{
+	position:absolute;
+	top:40%;
+	width:100%;
+	text-align:center;
+
+}
+
+input[type=text],
+input[type=submit]{
+	padding:10px 15px;
+	border:1px solid #CCC;
+	width:300px;
+	color:#444;
+}
+
+input[type=submit]{
+	width:auto;
+}
+
+input[type=submit]:active{
+	background-color:#E5E5E5;
+}
+
+input[type=text]:focus{
+	border:1px solid #FCCA95;
+	outline:none;
+}
+
+input[name=website]{
+	position:absolute;
+	left:-9999px;
+}
+
+#counter{
+	text-align:center;
+	font-size:28px;
+	position:absolute;
+	top:40%;
+	width:100%;
+	margin-top:-128px;
+}
+
+#counter .days{
+	display:block;
+	font-size:120px;
+}
+
+#counter #since{
+	margin-top:40px;
+	font-size:39px;
+}
